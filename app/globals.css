@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: black
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+  width: 6px; /* Largura da barra de rolagem */
+  cursor: pointer
+}
+
+/* Estilizando o controle deslizante */
+::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* Cor de fundo do controle deslizante */
+  border-radius: 6px; /* Raio de borda do controle deslizante */
+  cursor: pointer
+}
+
+/* Mudar a cor da barra de rolagem quando passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
